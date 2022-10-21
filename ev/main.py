@@ -12,8 +12,8 @@ electricity_spend = float(input('Please enter your monthly electricity consupmti
 bill_support = input('Is your electricity bill supported by the government? (y/n): ')
 
 ev = Ev_Saving()
-
-bill = Ev_Saving.electic_bill(bill_support, ev.increased_electricity(monthly_km) +electricity_spend)
+x = ev.increased_electricity(monthly_km) +electricity_spend
+bill = Ev_Saving.electic_bill(x ,bill_support, x)
 bill_increase = bill - ev.before_bill(bill_support, electricity_spend)
 savings = gas_cost - bill_increase
 
@@ -21,4 +21,4 @@ savings = gas_cost - bill_increase
 print(f'Your monthly electricity bill before buying an electric vehicle: {ev.before_bill(bill_support, electricity_spend)} JOD')
 print(f'Your monthly electricity bill after buying an electric vehicle: {bill} JOD')
 print(f'Your monthly electricity bill increase:{bill_increase} JOD')
-print(f'Your monthly savings: {savings} JOD')
+print(f'Your monthly savings are: {savings} JOD')
